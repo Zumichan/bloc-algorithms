@@ -22,7 +22,7 @@ Getting Unstuck on Bloc checkpoints;
 FUNCTION gettingUnstuck(time)
   IF time < 30 mins THEN
     SEARCH Google and Stack Overflow
-  IF ELSE time > 30mins && time < 5 hours THEN
+  IF ELSE time > 30mins AND time < 5 hours THEN
     ASK for help in Slack
   ELSE
     ASK for help during your weekly mentor session
