@@ -1,0 +1,50 @@
+#### Exercises
+
+1. What is time complexity and what is its relation to algorithms?
+
+A) Time complexity is the metric used to describe the efficiency of an algorithm. It is vital to understanding how an algorithm's speed changes based on the input size. 
+
+2. What is runtime?
+
+A) It is the physical time duration of an algorithm.
+
+3. How is the runtime of an algorithm calculated?
+
+A) The most common approach is using Big O notation. To determine the runtime of an algorithm, add up how many instructions the algorithm will execute as a function of the size of its input, then simplify the expression to the largest term and drop any constants.
+
+4. Name the six types of algorithm growth rates we saw in this checkpoint and list them in order of most efficient to least efficient. Now Google another algorithmic growth rate not covered and place it in the correct spot in your list.
+
+A)
+O(1)=Constant Growth Rate
+O(log n)=Logarithmic Growth Rate
+O(n)=Linear Growth Rate
+O(n log n)=Log-Linear Growth Rate
+O(n^2)=Quadratic Growth Rate
+O(n^3)=Cubic Growth Rate
+O(2^n)=Exponential Growth Rate
+O(n!)= Factorial Growth Rate
+
+5. Choose one of the algorithmic growth rates from the last question and make a comparison to a real-life situation.
+
+A)
+Logarithmic Growth Rate
+Literacy: Children and young students make massive leaps as they learn how to read. Meanwhile, college students and well-educated adults have to put in a focused effort to expand their vocabulary beyond commonly used words.
+
+Exponential Growth Rate
+Social media followers: When you only have 100 followers, getting another 100 followers may take six months. Once you have 1,000 followers, however, getting the next 100 may only take one month. Once you have 100,000 followers, getting another 100 probably takes one day. Your growth rate snowballs.
+
+6. Determine the time complexity of the following snippet of code. It is commonly known as a linear search.
+
+A) O(n) This function uses a single for loop.
+
+7. Determine the time complexity of the following snippet of code.
+
+A) O(n^2) This function uses a nested for loop.
+
+8. Determine the time complexity of the following snippet of code. It is commonly known as the Fibonacci sequence.
+
+A) O(2^n) This function uses a recursion (CALL fibonacci WITH number -2...CALL fibonacci WITH number -1)
+
+9. Out of the code snippets you just saw, which is the most time efficient?
+
+A) The linear search is the most time efficient.
