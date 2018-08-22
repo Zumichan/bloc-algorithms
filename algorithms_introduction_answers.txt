@@ -1,0 +1,44 @@
+#### Exercises
+
+1. Using proper pseudo-code, describe the following primitive algorithms:
+
+Making coffee;
+ADD water to the coffee pot
+PLACE a new coffee filter
+ADD coffee grinds to the filter
+PUT coffee pot to the machine
+START the coffee machine
+
+Washing dishes;
+PUT dirty dishes in the sink
+ADD dish soap to a sponge
+WHILE dirty dishes
+  SCRUB with sponge
+  RINSE with water
+  SET in drying rack
+END WHILE
+
+Getting Unstuck on Bloc checkpoints;
+FUNCTION gettingUnstuck(time)
+  IF time < 30 mins THEN
+    SEARCH Google and Stack Overflow
+  IF ELSE time > 30mins && time < 5 hours THEN
+    ASK for help in Slack
+  ELSE
+    ASK for help during your weekly mentor session
+  END IF
+END FUNCTION
+
+2. As with the knot algorithm, there may be more than one way to solve the problem. It is essential to try to pick the best algorithm for a situation. Name three companies who created an algorithm that made them successful, e.g., Google's search algorithm. It doesn't need to be a tech example (such as a recipe or manufacturing a product). Google's algorithm produces more relevant results than other search engines; what about each of your cases make them stand out?
+
+A)
+UPS: By applying telematics and algorithms, UPS saves its drivers 85 million miles a year, resulting in annual savings of $2.55 billion.
+
+Tesla: Applied A.I. to develop self-driving cars in the consumer market. It feeds hundreds of thousands of miles of driving videos and data and uses algorithms to break them down to understand and create a massive vocabulary around driving.
+
+Netflix: Applied Machine Learning to improve its movie recommendations. It uses an algorithm based on what you have watched in the past and the shows with good ratings.
+
+3. Hypothesize about what constitutes an efficient algorithm versus an inefficient algorithm.
+
+A) An algorithm's efficiency depends on two key resources, time and space. The faster the algorithm, the quicker it finishes its task, the more efficient it is with respect to time. The less memory it uses, the more efficient it is with respect to space.
+
