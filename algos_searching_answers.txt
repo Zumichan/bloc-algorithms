@@ -1,0 +1,66 @@
+#### Short Answer
+
+1.What is a real-life scenario that uses linear search?
+
+A) Going through a DVD folder one by one until you find the particular title you are looking for.
+
+2.What is a real-life scenario that uses binary search?
+
+A) To find a word "Bloc" in a paper dictionary, you open the middle of the dictionary and find the middle word. You compare the middle word with "Bloc". Then you determine if "Bloc" belongs to before or after the middle word. You disregard the half of the dictionary which is irrelevant.You repeat this process until you find the word.
+
+3.Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using linear search?
+
+A) It will take 7 iterations to find the value.
+
+4.Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using binary search?
+
+A) It will take 3 iterations to find the value.
+
+5.Given an unsorted collection of a million items, which algorithm would you choose between linear search and binary search? Explain your reasoning.
+
+A) I will choose linear search because it works on an unsorted collection. Binary search doesn't work on an unsorted collection.
+
+6.Given a sorted collection of a million items, which algorithm would you choose between linear search and binary search? Explain your reasoning.
+
+A) I will choose binary search because it works well with sorted collection. 
+
+#### Programming Assignment:
+1.You and a friend have set a wager to see who can find the word "Albatross" in the dictionary the fastest. Write a program to allow you to win the bet.
+
+pre-sorted collection, so use a binary search
+
+```
+function searchWord(arr, word){ 
+  let left = 0;
+  let right = arr.length-1;
+  if(right<left){
+    return "Word not found";
+  }
+  while(left<=right){
+    let mid = Math.floor((right-left)/2)+left;
+    if(arr[mid]===word){
+      return mid;
+    }else if (arr[mid]<word){
+      left = mid+1;
+    } else {
+      right = mid-1;
+    }
+  }
+  return -1;
+}
+```
+
+2.You work at a pet store, and a child has asked you to net the only white-spotted goldfish from the fish tank. Write a program that will help you net the right fish.
+
+un-sorted collection, so use a linear search
+
+```
+function catchFish(arr, fish){
+  for (let i=0; i<arr.length; i++){
+    if(arr[i]===fish){
+      return "You found the white-spotted goldfish!";
+    }
+  }
+return "There is no white-spotted goldfish in the tank."
+}
+```
