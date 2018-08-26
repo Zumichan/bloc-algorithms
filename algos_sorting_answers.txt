@@ -1,0 +1,54 @@
+#### Exercises
+
+1. Write pseudocode for bubble sort.
+
+A) 
+FUNCTION bubbleSort(collection)
+  REPEAT
+    SET swapped to false
+    FOR i = FIRST INDEX of collection to LAST INDEX of collection - 1
+      IF collection[i] > collection[i + 1] THEN
+        SET tmp to collection[i]
+        MOVE collection[i] to collection[i + 1]
+        SET collection[i + 1] to tmp
+        SET swapped to true
+      END IF
+    END FOR
+  UNTIL swapped is FALSE
+
+  RETURN collection
+END FUNCTION
+
+2. Write pseudocode for quicksort.
+
+A)
+FUNCTION quickSort(collection)
+    SET a new array called less
+    SET a new array called greater
+    SET pivot = any element of collection
+    FOR each element in an array
+      IF element < pivot THEN 
+        ADD element to less
+      ELSE element > pivot THEN
+        ADD element to greater
+      quickSort(less)
+      quickSort(greater)
+  COMBINE less pivot greater
+END FUNCTION
+  
+3. We talked about time complexity in a previous checkpoint, and how to get an idea of the efficiency of an algorithm. After looking at the pseudocode for the above sorting methods, identify why merge sort and quick sort are much more efficient than the others. Walking through each algorithm with a few sample collections may help.
+
+A) 
+Both merge sort and quick sort break the collection into sub-collections and sorts each sub-collection which save time to sort through the array. 
+Quick sort is more efficient and faster because it is an in-place sorting algorithm meaning no additional storage space is needed to perform sorting. As a result, it uses little space. It also uses less memory and can handle large amount of data quickly than other methods. 
+Merge sort is better for large data structures. It also has an advantage of being stable. 
+
+4. All of the sorts addressed in this checkpoint are known as comparison sorts. Research bucket sort and explain how it works. What is the ideal input for bucket sort?
+
+A) Bucket sort is a comparison sort algorithm that operates on elements by distributing them into different buckets and them sorting these buckets individually. 
+Steps:
+1. Create an empty array.
+2. Loop through the original array and put each object in a “bucket”.
+3. Sort each of the non-empty buckets
+4. Check the buckets in order and then put all objects back into the original array.
+It is useful when the input is uniformly distributed over a range. 
