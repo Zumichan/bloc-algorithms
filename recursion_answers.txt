@@ -1,0 +1,75 @@
+#### Exercises
+
+1. Define and compare recursion and iteration.
+
+A) 
+Recursion: The technique of calling function calls repeatedly for each cases.
+Iteration: The technique of utilizing a loop to repeat a process.
+Recursive solutions are easier to implement, but tend to run slower and are more subject to system limitations than iterative solutions. 
+
+2. Name five algorithms that are commonly implemented by recursion.
+
+A)
+Fibonacci sequence
+Factorial Operation
+Binary Search
+Merge Sort
+Quick Sort
+
+3. When should you use recursion, and when should you avoid recursion? Give examples for each.
+
+A)
+Using recursion makes the most sense when an algorithm can be defined as a combination of sub-results starting with known cases. i.e. implementing a function to calculate factorial
+
+Using recursion is not ideal when going straight through a data set. i.e. finding the maximum number
+
+4. Compare the recursive and iterative solutions to the three algorithms from the checkpoint (factorial, maximum, and fibonacci). What is similar, and what is different?
+
+A)
+Factorial: With the recursive version, the calculation process is just like the mathematical definition of the factorial operation.With the iterative version, we initialize the result variable to 1 and keep track the calculations. The function iterates through the numbers down 2 to emulate the factorial calculation process.
+
+Maximum:The iterative version is much cleaner than the recursive version.Since loops are great at running straight through a data set, algorithms requiring a pass over a collection works well as an iterative solution.
+
+Fibonacci:The recursive implementation seems more straightforward, but the tendency to repeat calculations introduces a performance concern that outweighs the cost of the slightly more complex iterative implementation.
+
+5. Given a multi-dimensional collection (such as an array) where the number of dimensions is unknown, write a recursive algorithm to count the number of items in the entire collection.
+
+```
+let count = 0;
+
+function countItems(arr){
+  if(!Array.isArray(arr)){
+     count++;
+  } else {
+    for(let i = 0; i < arr.length; i++){
+      countItems(arr[i]);
+    }
+  }
+return count;
+}
+```
+
+6. A palindrome is a word or phrase whose spelling is the same either direction (e.g., racecar). Write a recursive algorithm to determine if a given word or phrase is a palindrome.
+
+```
+function checkPalindrome(word){
+  let regExp=/[^A-Za-z0-9]/g;
+  let lowerCase = word.toLowerCase().replace(regExp,'');
+  let wordLength = lowerCase.length;
+  if(wordLength <=1){
+    return true;
+  }
+  else if (lowerCase[0]===lowerCase[wordLength-1]){
+    return checkPalindrome(lowerCase.slice(1,wordLength-1));
+  }
+return false;
+}
+
+console.log(checkPalindrome("racecar"));
+console.log(checkPalindrome("Amore/.Roma"));
+console.log(checkPalindrome("Bloc"));
+```
+
+7. Google Easter Egg: Google the term "recursion". Google will prompt you with "Did you mean: recursion". Explain why this behavior exhibits properties of recursion.
+
+A) Google is a playful company and has added Easter Eggs into many of its products and services such as Google Search. If you click on the link "Did you mean: recursion", you will be linked backed to the same page. This gives us an idea of how recursion works!
