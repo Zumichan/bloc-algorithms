@@ -35,14 +35,13 @@ Fibonacci:The recursive implementation seems more straightforward, but the tende
 5. Given a multi-dimensional collection (such as an array) where the number of dimensions is unknown, write a recursive algorithm to count the number of items in the entire collection.
 
 ```
-let count = 0;
-
 function countItems(arr){
-  if(!Array.isArray(arr)){
-     count++;
-  } else {
-    for(let i = 0; i < arr.length; i++){
-      countItems(arr[i]);
+  let count = 0;
+  for(let i = 0; i < arr.length; i++){
+    if(Array.isArray(arr[i])){
+      count+=countItems(arr[i]);
+    } else {
+      count++;
     }
   }
 return count;
@@ -72,4 +71,4 @@ console.log(checkPalindrome("Bloc"));
 
 7. Google Easter Egg: Google the term "recursion". Google will prompt you with "Did you mean: recursion". Explain why this behavior exhibits properties of recursion.
 
-A) Google is a playful company and has added Easter Eggs into many of its products and services such as Google Search. If you click on the link "Did you mean: recursion", you will be linked backed to the same page. This gives us an idea of how recursion works!
+A) Google is a playful company and has added Easter Eggs into many of its products and services such as Google Search. Why Google returning you to the same page is an example of recursion. If you click on "Did you mean: recursion", you will be linked back to the same page.
